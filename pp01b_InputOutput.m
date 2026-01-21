@@ -15,9 +15,9 @@ disp(currentFolder)
 
 myMatrix = randn(5,5);
 
-writematrix(myMatrix, [currentFolder '\myRandomMatrix.csv']); % save as comma separated file that can be interpreted as table by Excel
+writematrix(myMatrix, fullfile(currentFolder, 'myRandomMatrix.csv')); % save as comma separated file that can be interpreted as table by Excel
 
-save([currentFolder '\myRandomMatrix'],"myMatrix"); % this saves an "m" file, MATLAB's native data file format
+save(fullfile(currentFolder, 'myRandomMatrix.mat'),"myMatrix"); % this saves an "m" file, MATLAB's native data file format
 
 %% create a new matrix to load
 % 1. matrix to edit in Excel
@@ -25,9 +25,9 @@ save([currentFolder '\myRandomMatrix'],"myMatrix"); % this saves an "m" file, MA
 
 myOneMatrix = ones(5,5);
 
-writematrix(myOneMatrix, [currentFolder '\myOneMatrix.csv']); % save as comma separated file that can be interpreted as table by Excel
+writematrix(myOneMatrix, fullfile(currentFolder, 'myOneMatrix.csv')); % save as comma separated file that can be interpreted as table by Excel
 
-myNextMatrix = readmatrix([currentFolder '\myOneMatrix.csv']);
+myNextMatrix = readmatrix(fullfile(currentFolder, 'myOneMatrix.csv'));
 
 
 
