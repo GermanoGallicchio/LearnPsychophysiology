@@ -1,5 +1,5 @@
-%% JXH-3089 
-% Computational psychophysiology workshop
+% Psychophysiology Learning Resources - Germano Gallicchio
+% https://germanogallicchio.github.io/learning/
 
 clear all; 
 
