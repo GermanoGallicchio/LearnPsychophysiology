@@ -205,7 +205,10 @@ for wIdx = 1:size(wavesN,1)
 end
 
 %% save the last wave
+% important: we will use this wave in the next script
 
+% make sure you know which working directory you saving this in by checking
+% through pwd. you need to load the data from the same directory later on.
 myWave = wavesN(end,:);
 
 save('myWorkingWave',"myWave", "timeVec")
