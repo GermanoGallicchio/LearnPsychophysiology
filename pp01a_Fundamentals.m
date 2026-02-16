@@ -1,11 +1,8 @@
 % Psychophysiology Learning Resources - Germano Gallicchio
 % https://germanogallicchio.github.io/learning/
 
-clear all; 
-
 %% Display text on screen
 
-clc
 disp('Hello, World!')
 
 % try to change the string of text to display a different text
@@ -19,7 +16,9 @@ disp(42)
 
 %% Display text and number on the screen
 
+% dont worry about the square brackets--they will be explained later
 disp(['Hello, World!' 42])
+
 
 % the code does not behave as we expected
 % this is because we are mixing two data types: string and numbers (double)
@@ -98,15 +97,43 @@ disp(mat)
 
 sequence = 1:10;
 
-%% determine the size of vectors and matrices
+%% Determine the size of vectors and matrices
 
-size(rowVec)
-size(colVec)
-size(mat)
+% size() tells us the dimensions of an array
+disp('Size of row vector:')
+disp(size(rowVec))  % [1 × 5] means 1 row, 5 columns
 
-%% random sequences
+disp('Size of column vector:')
+disp(size(colVec))  % [5 × 1] means 5 rows, 1 column
 
-randSequence = randn(1,12);
+disp('Size of matrix:')
+disp(size(mat))  % [3 × 3] means 3 rows, 3 columns
+
+%% Indexing: Accessing Specific Elements
+
+% Access single element: arrayName(row, column)
+disp('Element at row 2, column 3 of matrix:')
+disp(mat(2, 3))  % Should be 6
+
+% Access entire row - use : for "all columns"
+disp('Entire row 2:')
+disp(mat(2, :))  % [4, 5, 6]
+
+% Access entire column - use : for "all rows"
+disp('Entire column 3:')
+disp(mat(:, 3))  % [3; 6; 9]
+
+% Access range of elements
+disp('Elements 2 to 4 from row vector:')
+disp(rowVec(2:4))  % [2, 3, 4]
+
+% Access specific indices
+disp('Elements 1, 3, and 5 from row vector:')
+disp(rowVec([1, 3, 5]))  % [1, 3, 5]
+
+%% Random sequences
+
+randSequence = randn(1,12);  % 1 row, 12 columns of random numbers
 
 
 %% Basic Plotting
