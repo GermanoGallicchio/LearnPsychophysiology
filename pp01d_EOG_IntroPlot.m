@@ -69,8 +69,8 @@ for i = 1:length(trialsToShow)
     xVec = timeSec;
     
     % Vertical offset: half-range of this trial, multiplied by index
-    trialRange = range(eogDeg(chanIdx, :, tIdx));
-    vertOffset = -(i-1) * trialRange / 2;
+    trialRange = range(mean(eogDeg(chanIdx, :, :),3));
+    vertOffset = -(i-1) * trialRange;
     
     yVec = vertOffset + squeeze(eogDeg(chanIdx, :, tIdx));
     plot(xVec, yVec, 'Color', colorOrder(i,:))
