@@ -150,14 +150,14 @@ disp(['Filter window length: ' num2str(medianFilterLength_sec, '%.3f') ' s (' nu
 
 % Set up the algorithm parameters
 % dispersion
-% algorithmChoice.name = 'dispersion';  % Algorithm type: 'velocity' or 'dispersion'
-% algorithmChoice.winlen = round(0.25 * srate) - 1;  % Filter window length in samples
-% algorithmChoice.threshold = 3;  % Threshold in degrees (or use 'auto')
+algorithmChoice.name = 'dispersion';  % Algorithm type: 'velocity' or 'dispersion'
+algorithmChoice.winlen = round(0.25 * srate) - 1;  % Filter window length in samples
+algorithmChoice.threshold = 3;  % Threshold in degrees (or use 'auto')
 % velocity
-algorithmChoice.name = 'velocity';  % Algorithm type: 'velocity' or 'dispersion'
-algorithmChoice.winlen = 767;        % Savitzky-Golay frame length (samples)
-algorithmChoice.polynDeg = 5;        % Savitzky-Golay polynomial
-algorithmChoice.threshold = 33;  % Threshold in degrees (or use 'auto')
+% algorithmChoice.name = 'velocity';  % Algorithm type: 'velocity' or 'dispersion'
+% algorithmChoice.winlen = 767;         % Savitzky-Golay frame length (samples)
+% algorithmChoice.polynDeg = 5;        % Savitzky-Golay polynomial
+% algorithmChoice.threshold = 33;  % Threshold in degrees (or use 'auto')
 
 % Run the QE detection function
 % Inputs: time series data, time vector, parameters, show plot?
