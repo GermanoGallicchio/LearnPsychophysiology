@@ -66,7 +66,7 @@ colorOrder = lines(length(trialsToShow));
 
 for i = 1:length(trialsToShow)
     tIdx = trialsToShow(i);
-    xVec = timeVector;
+    xVec = timeSec;
     
     % Vertical offset: half-range of this trial, multiplied by index
     trialRange = range(eogDeg(chanIdx, :, tIdx));
